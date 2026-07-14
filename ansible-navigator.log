@@ -9,3 +9,25 @@
 
 2026-06-24T05:30:45.366341+00:00 WARNING 'ansible_navigator.image_manager.puller._log_message' stderr: Error: registry.redhat.io/ansible-automation-platform-26/ee-supported-rhel9:latest: image not known
 
+2026-06-30T04:39:45.524820+00:00 ERROR 'ansible_navigator.image_manager.puller._log_message' Execution environment pull failed
+2026-06-30T04:41:59.555963+00:00 ERROR 'ansible_navigator.image_manager.puller._log_message' Execution environment pull failed
+2026-06-30T04:54:37.473344+00:00 WARNING 'ansible_navigator.image_manager.puller._log_message' Image inspection failed, image assumed to be corrupted or missing
+2026-06-30T04:54:37.473777+00:00 WARNING 'ansible_navigator.image_manager.puller._log_message' stdout: []
+
+2026-06-30T04:54:37.473825+00:00 WARNING 'ansible_navigator.image_manager.puller._log_message' stderr: Error: registry.redhat.io/ansible-automation-platform-26/ee-supported-rhel9:latest: image not known
+
+2026-06-30T04:54:39.998549+00:00 ERROR 'ansible_navigator.image_manager.puller._log_message' Execution environment pull failed
+2026-06-30T04:55:32.476943+00:00 WARNING 'ansible_navigator.run' Dirty exit, killing the pid
+2026-07-02T04:56:39.568057+00:00 WARNING 'ansible_navigator.image_manager.puller._log_message' Image inspection failed, image assumed to be corrupted or missing
+2026-07-02T04:56:39.568304+00:00 WARNING 'ansible_navigator.image_manager.puller._log_message' stdout: []
+
+2026-07-02T04:56:39.568342+00:00 WARNING 'ansible_navigator.image_manager.puller._log_message' stderr: Error: registry.redhat.io/ansible-automation-platform-26/ee-supported-rhel9:latest: image not known
+
+2026-07-02T04:56:42.100763+00:00 ERROR 'ansible_navigator.image_manager.puller._log_message' Execution environment pull failed
+2026-07-02T04:57:09.980300+00:00 WARNING 'ansible_navigator.image_manager.puller._log_message' Image inspection failed, image assumed to be corrupted or missing
+2026-07-02T04:57:09.980483+00:00 WARNING 'ansible_navigator.image_manager.puller._log_message' stdout: []
+
+2026-07-02T04:57:09.980517+00:00 WARNING 'ansible_navigator.image_manager.puller._log_message' stderr: Error: registry.redhat.io/ansible-automation-platform-26/ee-supported-rhel9:latest: image not known
+
+2026-07-02T04:57:11.898953+00:00 ERROR 'ansible_navigator.image_manager.puller._log_message' Execution environment pull failed
+2026-07-02T05:01:54.824234+00:00 WARNING 'ansible_navigator.run' Dirty exit, killing the pid

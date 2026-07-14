@@ -1,0 +1,14 @@
+
+[webservers]
+server2
+server1
+
+[databases]
+server3
+server4
+
+[dev]
+server5
+
+[prod:children]
+databases

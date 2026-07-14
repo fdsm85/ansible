@@ -1,0 +1,34 @@
+---
+- name: Loop trough users
+  hosts: all
+  vars:
+    users:
+      - name: tompenny
+        groups: webservers
+        password: "password"
+      - name: mikecarrol
+        groups: databases
+        password: "password"
+      - name: frankiehill
+        groups: dev
+        password: "password" 
+  tasks: 
+    - name: Create group
+      ansible.builtin.group:
+       name: "{{ item }}"
+       state: present
+      loop:
+        - webservers
+        - databases
+        - dev
+
+    - name: Create users
+      ansible.builtin.user:
+       name: "{{ item.name }}"
+       groups: "{{ item.groups }}"
+       password: "{{ item.password | password_hash('sha512', 'satlyguy') }}"
+       append: true
+       state: present
+      loop: "{{ users }}"
+      when: inventory_hostname in groups[itme.groups]
+   
