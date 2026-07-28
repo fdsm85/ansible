@@ -1,0 +1,32 @@
+
+- create inventory file
+- create default-disable files
+ansible-navigator settings --sample > ansible-navigator-disabled
+ansible-config init --disabled >ansible-config-disabled
+
+- set-up [defaults]host_key_checking=False in ansible.cfg (not for production)
+- copy disabled file into ansible-navigator.yml
+- get the latest registry from the error, after type ansible-navigator command  registry.redhat.io/ansible-automation-platform-26/ee-supported-rhel9:latest
+- edit from ansible-navigator.yml
+
+---
+ansible-navigator:
+#
+#
+  execution-environment:
+#     
+    image: registry.redhat.io/ansible-automation-platform-26/ee-supported-rhel9:latest 
+    pull:
+#    
+      policy: missing
+#    
+  logging:
+#     # Specify the ansible-navigator log level
+    level: debug
+#     # Specify if log messages should be appended to an existing log file,
+#     # otherwise a new log file will be created per session
+    append: False
+#    
+
+---
+

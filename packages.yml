@@ -1,0 +1,37 @@
+---
+- name: Install Packages
+  hosts: webservers
+ # become: true
+  tasks:
+    - name: Install Nginx
+      ansible.builtin.dnf:
+        name: nginx
+        state: latest
+
+- name: Install Developer Tools
+  hosts: dev
+  #become: true
+  tasks:
+    - name: Install the 'Development tools' package group
+      ansible.builtin.dnf:
+        name: '@Development tools'
+        state: present
+
+- name: Install Random Packages
+  hosts: dev
+  tasks:
+    - name: Installation
+      ansible.builtin.dnf:
+        name: 
+         - mariadb
+         - mariadb-connector-c-config
+        state: present
+
+- name: Remove a package
+  hosts: webservers
+  tasks:
+    - name: Remove NGNX
+      ansible.builtin.dnf:
+        name: nginx
+        state: absent
+        autoremove: true
